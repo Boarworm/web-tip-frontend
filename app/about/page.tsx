@@ -3,7 +3,7 @@ import Container from "@/components/Container"
 import WorkExperience from '@/components/WorkExperience'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
-export default function AboutBlog() {
+export default function PageAbout() {
   const breadcrumbs = [
     { name: "About", url: "/about" },
   ]
