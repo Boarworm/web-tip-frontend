@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"title": "E-commerce Platform",
+		"description": "Modern online store with React and Laravel backend, featuring secure payments and inventory management.",
+		"image": "/images/placeholder.png",
+		"url": "https://google.com"
+	},
+	{
+		"id": 2,
+		"title": "Restaurant Landing Page",
+		"description": "Responsive landing page with online reservations, menu showcase, and contact integration.",
+		"image": "/images/placeholder.png",
+		"url": "https://google.com"
+	},
+	{
+		"id": 3,
+		"title": "Corporate Website",
+		"description": "Professional business website with CMS integration, team profiles, and service showcase.",
+		"image": "/images/placeholder.png",
+		"url": "https://google.com"
+	},
+	{
+		"id": 4,
+		"title": "SaaS Dashboard",
+		"description": "Interactive web application with real-time data visualization and user management system.",
+		"image": "/images/placeholder.png",
+		"url": "https://google.com"
+	},
+	{
+		"id": 5,
+		"title": "Portfolio Website",
+		"description": "Creative portfolio with smooth animations, project galleries, and contact form integration.",
+		"image": "/images/placeholder.png",
+		"url": "https://google.com"
+	},
+	{
+		"id": 6,
+		"title": "Real Estate Platform",
+		"description": "Property listing website with advanced search, map integration, and agent contact system.",
+		"image": "/images/placeholder.png",
+		"url": "https://google.com"
+	}
+]
