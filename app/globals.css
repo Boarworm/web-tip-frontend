@@ -1,26 +1,73 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-brand-primary-50: var(--brand-primary-50);
+  --color-brand-primary-300: var(--brand-primary-300);
+  --color-brand-primary-500: var(--brand-primary-500);
+  --color-brand-primary-700: var(--brand-primary-700);
+  --color-brand-primary-900: var(--brand-primary-900);
+
+  --color-brand-secondary-50: var(--brand-secondary-50);
+  --color-brand-secondary-300: var(--brand-secondary-300);
+  --color-brand-secondary-500: var(--brand-secondary-500);
+  --color-brand-secondary-700: var(--brand-secondary-700);
+  --color-brand-secondary-900: var(--brand-secondary-900);
+
+  --color-brand-base-50: var(--brand-base-50);
+  --color-brand-base-100: var(--brand-base-100);
+  --color-brand-base-200: var(--brand-base-200);
+  --color-brand-base-500: var(--brand-base-500);
+  --color-brand-base-700: var(--brand-base-700);
+  --color-brand-base-800: var(--brand-base-800);
+  --color-brand-base-950: var(--brand-base-950);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --brand-primary-50: oklch(0.95 0.05 285.885);
+  --brand-primary-300: oklch(0.75 0.15 285.885);
+  --brand-primary-500: oklch(0.65 0.2 285.885);
+  --brand-primary-700: oklch(0.55 0.15 285.885);
+  --brand-primary-900: oklch(0.35 0.1 285.885);
+
+  --brand-secondary-50: oklch(0.95 0.05 220);
+  --brand-secondary-300: oklch(0.75 0.15 220);
+  --brand-secondary-500: oklch(0.65 0.2 220);
+  --brand-secondary-700: oklch(0.55 0.15 220);
+  --brand-secondary-900: oklch(0.35 0.1 220);
+
+  --brand-base-50: oklch(0.98 0 0);
+  --brand-base-100: oklch(0.92 0 0);
+  --brand-base-200: oklch(0.85 0 0);
+  --brand-base-500: oklch(0.6 0 0);
+  --brand-base-700: oklch(0.4 0 0);
+  --brand-base-800: oklch(0.25 0 0);
+  --brand-base-950: oklch(0.1 0 0);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+  --brand-primary-50: oklch(0.25 0.1 285.885);
+  --brand-primary-300: oklch(0.55 0.15 285.885);
+  --brand-primary-500: oklch(0.65 0.2 285.885);
+  --brand-primary-700: oklch(0.75 0.15 285.885);
+  --brand-primary-900: oklch(0.85 0.1 285.885);
+
+  --brand-secondary-50: oklch(0.25 0.1 220);
+  --brand-secondary-300: oklch(0.55 0.15 220);
+  --brand-secondary-500: oklch(0.65 0.2 220);
+  --brand-secondary-700: oklch(0.75 0.15 220);
+  --brand-secondary-900: oklch(0.85 0.1 220);
+
+  --brand-base-50: oklch(0.08 0 0);
+  --brand-base-100: oklch(0.12 0 0);
+  --brand-base-200: oklch(0.18 0 0);
+  --brand-base-500: oklch(0.4 0 0);
+  --brand-base-700: oklch(0.7 0 0);
+  --brand-base-800: oklch(0.85 0 0);
+  --brand-base-950: oklch(0.95 0 0);
 }
