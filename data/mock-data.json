@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "title": "Custom website development",
+      "description": "Building websites from scratch using modern frameworks (React, Next.js, Laravel, etc.)",
+      "icon": "code"
+    },
+    {
+      "title": "Landing page design & creation",
+      "description": "High-converting pages for marketing campaigns and lead generation",
+      "icon": "rocket"
+    },
+    {
+      "title": "Web application development",
+      "description": "Interactive web apps, dashboards, SaaS platforms",
+      "icon": "apps"
+    },
+    {
+      "title": "Website redesign & modernization",
+      "description": "Updating outdated sites with modern design and performance",
+      "icon": "palette"
+    },
+    {
+      "title": "API development & integration",
+      "description": "Backend services, third-party integrations, database connections",
+      "icon": "api"
+    },
+    {
+      "title": "CMS setup & implementation",
+      "description": "Content management solutions for easy website updates",
+      "icon": "settings"
+    },
+    {
+      "title": "Website maintenance & updates",
+      "description": "Regular updates, security patches, content management",
+      "icon": "tool"
+    },
+    {
+      "title": "Performance optimization",
+      "description": "Speed improvements, SEO optimization, mobile responsiveness",
+      "icon": "gauge"
+    }
+  ]
+}
