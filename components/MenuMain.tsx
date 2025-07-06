@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import navigationData from '@/data/navigation.json'
+import mockData from "@/data/mock-data.json"
 
 interface Props {
   className?: string
@@ -9,7 +9,7 @@ interface Props {
 const MenuMain = ({ className = "" }: Props) => {
   return (
     <nav className={cn('flex items-baseline space-x-6', className)}>
-      {navigationData.map((item, index) => (
+      {mockData.navigation.map((item, index) => (
         <div key={index} className="relative group">
           <Link href={item.url} className="relative text-gray-500 hover:text-gray-300 px-0 py-2 text-base font-medium transition-all duration-300 group-hover:text-gray-900">
             {item.title}
