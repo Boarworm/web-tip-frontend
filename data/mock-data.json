@@ -61,7 +61,11 @@
       "title": "Services",
       "url": "/services",
       "order": 3,
-      "active": true
+      "active": true,
+      "submenu": [
+        {"title": "Web Development", "url": "/services/web"},
+        {"title": "Design", "url": "/services/design"}
+      ]
     },
     {
       "id": "portfolio",
