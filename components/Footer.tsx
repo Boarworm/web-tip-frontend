@@ -12,8 +12,8 @@ interface Props {
 
 export default function Footer({ className }: Props) {
   return (
-    <div className={cn("bg-gray-700", className)}>
-      <div className="bg-brand-primary-500">
+    <div className={cn("", className)}>
+      <div className="bg-brand-base-800">
         <Container className="py-10 grid gap-10 grid-cols-1 md:grid-cols-3">
           <div className="">
             <Logo
@@ -32,7 +32,7 @@ export default function Footer({ className }: Props) {
             <div className="">
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-white mr-3 mt-0.5 shrink-0 self-start xl:mr-6"/>
-                <a href="mailto:info@web-tip.top" className="transition text-white hover:text-brand-secondary-500 truncate ">info@web-tip.top</a>
+                <a href="mailto:info@web-tip.top" className="transition text-white hover:text-brand-primary-500 truncate ">info@web-tip.top</a>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Footer({ className }: Props) {
 
               {mockData.navigation.map((item) => (
                 <li key={item.id} className="mb-3">
-                  <Link href={item.url} className="mb-2 last:mb-0 text-white transition hover:text-brand-secondary-500 md:mb-0 flex items-center">
+                  <Link href={item.url} className="mb-2 last:mb-0 text-white transition hover:text-brand-primary-500 md:mb-0 flex items-center">
                     <ChevronRight className="w-3 h-3 text-white mr-2 shrink-0"/>
                     {item.title}
                   </Link>
@@ -52,7 +52,7 @@ export default function Footer({ className }: Props) {
           </div>
         </Container>
       </div>
-      <div className="bg-brand-primary-500">
+      <div className="bg-brand-base-950">
         <Container className="py-6">
           <div className="flex flex-col items-center md:flex-row md:justify-between">
             <Copyright startYear={2020} companyName="Web developer notes" className="text-white text-center"/>
