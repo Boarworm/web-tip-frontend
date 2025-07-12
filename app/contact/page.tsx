@@ -12,8 +12,8 @@ export default function PageContact() {
       <HeroSecondary title="Contact">
         <Breadcrumbs breadcrumbs={breadcrumbs}/>
       </HeroSecondary>
-      <Container className="py-12">
-        Coming soon ...
+      <Container className="py-12 prose">
+        <p>Contact me at <a href="mailto:info@web-tip.top">info@web-tip.top</a></p>
       </Container>
     </main>
   )
