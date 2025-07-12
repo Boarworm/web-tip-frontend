@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
@@ -13,7 +14,7 @@ interface Props {
 
 export default function Breadcrumbs({ breadcrumbs, className }: Props) {
   return (
-    <ol className={cn("flex items-center justify-center overflow-y-hidden overflow-x-auto p-0 list-none", className)} itemScope itemType="https://schema.org/BreadcrumbList">
+    <ol className={cn("flex items-center justify-start overflow-y-hidden overflow-x-auto p-0 list-none", className)} itemScope itemType="https://schema.org/BreadcrumbList">
       {/* Home breadcrumb */}
       <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
         <Link href="/" itemProp="item" className="flex items-center text-sm no-underline transition text-white hover:underline">
@@ -33,14 +34,14 @@ export default function Breadcrumbs({ breadcrumbs, className }: Props) {
         const isLast = index === breadcrumbs.length - 1
 
         return (
-          <div key={breadcrumb.url || breadcrumb.name}>
+          <React.Fragment key={breadcrumb.url || breadcrumb.name}>
             <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
               {isLast ? (
                 <div className="whitespace-nowrap text-white text-sm" itemProp="name">
                   {breadcrumb.name}
                 </div>
               ) : (
-                <Link className="text-neutral-darker text-sm whitespace-nowrap no-underline transition hover:underline" href={breadcrumb.url} itemProp="item">
+                <Link className="text-white text-sm whitespace-nowrap no-underline transition hover:underline" href={breadcrumb.url} itemProp="item">
                   <div itemProp="name">{breadcrumb.name}</div>
                 </Link>
               )}
@@ -53,7 +54,7 @@ export default function Breadcrumbs({ breadcrumbs, className }: Props) {
                 <span className="text-white">/</span>
               </li>
             )}
-          </div>
+          </React.Fragment>
         )
       })}
     </ol>
