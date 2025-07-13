@@ -1,9 +1,7 @@
-import { ContainerTextFlipUi } from "@/components/ui/ContainerTextFlip";
+import ContainerTextFlipUi from "@/components/ui/ContainerTextFlip"
 
-export function ContainerTextFlip() {
-    return (
-        <ContainerTextFlipUi
-            words={["better", "modern", "Tyler Durden", "awesome"]}
-        />
-    );
+export default function ContainerTextFlip() {
+  return (
+    <ContainerTextFlipUi words={["Business", "Brand", "Audience", "Sales", "Impact"]}/>
+  )
 }

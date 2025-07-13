@@ -1,57 +1,62 @@
-import React from "react";
-import { cn } from "@/lib/utils";
+import { cva, VariantProps } from "class-variance-authority"
+import { cn } from "@/lib/utils"
 
-type Tag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "div";
+const headingStyles = cva("font-sans font-bold leading-tight", {
+  variants: {
+    variant: {
+      default: "",
+      gradient: "bg-clip-text !text-transparent bg-gradient-to-b",
+    },
+    size: {
+      h1: "text-4xl md:text-7xl",
+      h2: "text-3xl md:text-6xl",
+      h3: "text-2xl md:text-5xl",
+      h4: "text-xl md:text-4xl",
+      h5: "text-lg md:text-3xl",
+      h6: "text-md md:text-2xl",
+    },
+    color: {
+      dark: "text-neutral",
+      light: "text-white",
+      primary: "text-brand-primary-500",
+    },
+  },
+  compoundVariants: [
+    { variant: "gradient", color: "dark", class: "from-neutral-900 to-neutral-700" },
+    { variant: "gradient", color: "light", class: "from-neutral-100 to-neutral-300" },
+    { variant: "gradient", color: "primary", class: "from-brand-primary-700 to-brand-primary-500" },
+  ],
+  defaultVariants: {
+    variant: "default",
+    size: "h1",
+    color: "dark",
+  },
+})
 
-interface HeadingProps {
-    tag?: Tag;
-    variant?: "default";
-    color?: "dark" | "light" | "primary";
-    size?: Tag;
-    text: string;
-    attributes?: Record<string, string>;
-    cssClasses?: string;
+type HeadingProps = {
+  as?: React.ElementType
+  className?: string
+} & VariantProps<typeof headingStyles> &
+  React.HTMLAttributes<HTMLElement>
+
+const Heading: React.FC<HeadingProps> = (
+  {
+    as: Tag = "h2",
+    variant,
+    color,
+    size,
+    className,
+    children,
+    ...props
+  }) => {
+  return (
+    <Tag
+      className={cn(headingStyles({ variant, color, size }), className)}
+      {...props}
+    >
+      {children}
+    </Tag>
+  )
 }
 
-const variants = {
-    default: {
-        baseBlockClasses: "font-secondary leading-tight",
-        colors: {
-            dark: { colorBlockClasses: "text-neutral-darker" },
-            light: { colorBlockClasses: "text-white" },
-            primary: { colorBlockClasses: "text-primary" },
-        },
-        sizes: {
-            h1: { sizeBlockClasses: "text-h1 lg:text-h1-lg xl:text-h1-xl" },
-            h2: { sizeBlockClasses: "text-h2 lg:text-h2-lg xl:text-h2-xl" },
-            h3: { sizeBlockClasses: "text-h3 lg:text-h3-lg xl:text-h3-xl" },
-            h4: { sizeBlockClasses: "text-h4 lg:text-h4-lg xl:text-h4-xl" },
-            h5: { sizeBlockClasses: "text-h5 lg:text-h5-lg xl:text-h5-xl" },
-            h6: { sizeBlockClasses: "text-h6 lg:text-h6-lg xl:text-h6-xl" },
-        },
-    },
-};
-
-const Heading: React.FC<HeadingProps> = ({
-                                             tag = "div",
-                                             variant = "default",
-                                             color = "dark",
-                                             size = "h2",
-                                             text,
-                                             cssClasses = "",
-                                             attributes = {},
-                                         }) => {
-    const Tag = tag;
-
-
-    return (
-        <Tag
-            data-block="Heading"
-            {...attributes}
-        >
-            {text}
-        </Tag>
-    );
-};
-
-export default Heading;
+export default Heading

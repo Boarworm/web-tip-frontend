@@ -1,42 +1,35 @@
-import { cva, VariantProps } from "class-variance-authority"
+import { cva } from "class-variance-authority"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 const buttonStyles = cva(
-  "relative cursor-pointer font-bold uppercase overflow-hidden border-2 transition-all duration-300 group",
+  "relative rounded-sm text-center cursor-pointer font-bold uppercase overflow-hidden transition-all duration-300 group",
   {
     variants: {
       variant: {
-        default: "bg-transparent",
-        filled: "bg-white text-brand-primary-500 border-white",
-        outline: "bg-transparent border-white text-white",
+        default: "",
+        gradient: "",
+      },
+      color: {
+        light: "",
+        dark: "",
       },
       size: {
         sm: "py-2 px-6 text-sm",
         md: "py-3 px-8 text-base",
         lg: "py-4 px-10 text-lg",
       },
-      color: {
-        white: "border-white text-white",
-        primary: "border-brand-primary-500 text-brand-primary-500",
-        dark: "border-neutral-800 text-neutral-800",
-      },
     },
     compoundVariants: [
-      { variant: "outline", color: "white", class: "border-white text-white hover:text-brand-primary-500" },
-      {
-        variant: "outline",
-        color: "primary",
-        class: "border-brand-primary-500 text-brand-primary-500 hover:text-white"
-      },
-      { variant: "outline", color: "dark", class: "border-neutral-800 text-neutral-800 hover:text-white" },
-      { variant: "filled", color: "white", class: "bg-white text-brand-primary-500 border-white" },
-      { variant: "filled", color: "primary", class: "bg-brand-primary-500 text-white border-brand-primary-500" },
-      { variant: "filled", color: "dark", class: "bg-neutral-800 text-white border-neutral-800" },
+      { variant: "default", color: "light", class: "bg-white text-brand-primary-500 hover:text-white" },
+      { variant: "default", color: "dark", class: "bg-neutral-800 text-white hover:text-brand-primary-500" },
+      { variant: "gradient", color: "light", class: "bg-gradient-to-r from-brand-primary-500 to-purple-600 text-white hover:text-white" },
+      { variant: "gradient", color: "dark", class: "bg-gradient-to-r from-neutral-800 to-neutral-900 text-white hover:text-brand-primary-500" },
     ],
     defaultVariants: {
-      variant: "outline",
+      variant: "default",
+      color: "light",
       size: "md",
-      color: "white",
     },
   }
 )
@@ -46,35 +39,39 @@ const backgroundStyles = cva(
   {
     variants: {
       variant: {
-        default: "bg-white",
-        filled: "bg-brand-primary-500",
-        outline: "bg-white",
+        default: "",
+        gradient: "",
       },
       color: {
-        white: "bg-white",
-        primary: "bg-brand-primary-500",
-        dark: "bg-neutral-800",
+        light: "",
+        dark: "",
       },
     },
     compoundVariants: [
-      { variant: "outline", color: "white", class: "bg-white" },
-      { variant: "outline", color: "primary", class: "bg-brand-primary-500" },
-      { variant: "outline", color: "dark", class: "bg-neutral-800" },
+      { variant: "default", color: "light", class: "bg-brand-primary-500" },
+      { variant: "default", color: "dark", class: "bg-white" },
+      { variant: "gradient", color: "light", class: "bg-gradient-to-r from-purple-600 to-brand-primary-500" },
+      { variant: "gradient", color: "dark", class: "bg-gradient-to-r from-neutral-900 to-neutral-800" },
     ],
     defaultVariants: {
-      variant: "outline",
-      color: "white",
+      variant: "default",
+      color: "light",
     },
   }
 )
 
-type ButtonProps = {
-  as?: React.ElementType;
-  className?: string;
-} & VariantProps<typeof buttonStyles> &
-  React.ButtonHTMLAttributes<HTMLButtonElement>;
+interface Props {
+  variant?: "default" | "gradient"
+  color?: "light" | "dark"
+  size?: "sm" | "md" | "lg"
+  className?: string
+  as?: React.ElementType
+  children?: React.ReactNode
+  href?: string
+  [key: string]: any
+}
 
-const Button: React.FC<ButtonProps> = (
+const Button: React.FC<Props> = (
   {
     as: Tag = "button",
     variant,
@@ -82,15 +79,21 @@ const Button: React.FC<ButtonProps> = (
     size,
     className,
     children,
+    href,
     ...props
   }) => {
+  if (href) {
+    Tag = Link
+  }
+
   return (
     <Tag
       className={cn(buttonStyles({ variant, color, size }), className)}
+      href={href}
       {...props}
     >
       <span className="relative z-20 transition-colors duration-300">{children}</span>
-      <span className={cn(backgroundStyles({ variant, color }))}/>
+      <span className={cn(backgroundStyles({ variant, color }))} />
     </Tag>
   )
 }
