@@ -1,6 +1,5 @@
 import HeroSecondary from "@/components/HeroSecondary"
 import Container from "@/components/Container"
-import WorkExperience from '@/components/WorkExperience'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default function PageAbout() {
@@ -14,7 +13,9 @@ export default function PageAbout() {
         <Breadcrumbs breadcrumbs={breadcrumbs}/>
       </HeroSecondary>
       <Container className="py-12">
-        <WorkExperience/>
+        <div className="prose">
+          <p>I'm a full-stack web developer with over 10 years of experience building fast, user-centered websites. I specialize in Laravel, OctoberCMS, and modern frontend tools like Next.js.</p>
+        </div>
       </Container>
     </main>
   )
