@@ -5,6 +5,8 @@ import { Mail, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import mockData from "@/data/mock-data.json"
 import Logo from '@/components/Logo'
+import { Spotlight } from '@/components/ui/Spotlight'
+import React from 'react'
 
 interface Props {
   className?: string
@@ -12,14 +14,15 @@ interface Props {
 
 export default function Footer({ className }: Props) {
   return (
-    <div className={cn("", className)}>
-      <div className="bg-brand-base-800">
+    <div className={cn("relative overflow-hidden", className)}>
+      <Spotlight/>
+      <div className="bg-black/[0.96]">
         <Container className="py-10 grid gap-10 grid-cols-1 md:grid-cols-3">
           <div className="">
             <Logo
               className=""
               color="light"
-              logoSrc="./logo-light.svg"
+              logoSrc="/logo-light.svg"
               title=""
               showText={true}
             />

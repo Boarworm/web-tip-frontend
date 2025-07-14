@@ -12,9 +12,9 @@ interface Props {
 
 export default function CardPost({ title, image, url }: Props) {
   return (
-    <Link href={url} className="block">
-      <CardContainer className="inter-var">
-        <CardBody className="bg-gray-50 relative group/card hover:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto p-6 border cursor-pointer transition-all duration-300">
+    <Link href={url} className="block w-full">
+      <CardContainer className="w-full inter-var">
+        <CardBody className="w-full h-full bg-gray-50 relative group/card hover:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] p-6 border cursor-pointer transition-all duration-300">
           <CardItem translateZ="100" className="w-full">
             <Image
               src={image}
