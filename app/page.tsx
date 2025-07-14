@@ -9,6 +9,25 @@ import CardPost from "@/components/CardPost"
 import Container from "@/components/Container"
 import ListServices from "@/components/ListServices"
 import Cta from "@/components/Cta"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Full-Stack Web Developer | Laravel & Next.js Expert",
+  description: "Full-stack web developer with 10+ years of experience building fast, user-centered websites. Specializing in Laravel, OctoberCMS, and modern frontend tools like Next.js.",
+  keywords: ["full-stack developer", "Laravel", "Next.js", "OctoberCMS", "web development", "Copenhagen"],
+  authors: [{ name: "Your Name" }],
+  openGraph: {
+    title: "Full-Stack Web Developer | Laravel & Next.js Expert",
+    description: "Full-stack web developer with 10+ years of experience building fast, user-centered websites. Specializing in Laravel, OctoberCMS, and modern frontend tools like Next.js.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Full-Stack Web Developer | Laravel & Next.js Expert",
+    description: "Full-stack web developer with 10+ years of experience building fast, user-centered websites. Specializing in Laravel, OctoberCMS, and modern frontend tools like Next.js.",
+  },
+}
 
 export default function PageHome() {
   return (
