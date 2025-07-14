@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import { ThemeProvider } from "next-themes"
 import { Geist, Geist_Mono } from "next/font/google"
 import { cn } from "@/lib/utils"
@@ -6,6 +5,7 @@ import type { Viewport } from 'next'
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import MenuMobile from '@/components/MenuMobile'
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -23,12 +23,6 @@ export const viewport: Viewport = {
   themeColor: 'black',
 }
 
-export const metadata: Metadata = {
-  title: "WTT",
-  description: "Professional web development services and solutions",
-  robots: "index, follow",
-}
-
 interface RootLayoutProps {
   children: React.ReactNode
 }
@@ -39,11 +33,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <body className={cn(
       geistSans.variable,
       geistMono.variable,
-      "antialiased flex flex-col min-h-screen"
+      "antialiased flex flex-col min-h-screen text-sm sm:text-base"
     )}>
-
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="light">
       <Header className="top-0 fixed z-10"/>
+      <MenuMobile/>
       <main id="main-content" className="flex-auto">
         {children}
       </main>
