@@ -9,6 +9,7 @@ import CardPost from "@/components/CardPost"
 import Container from "@/components/Container"
 import ListServices from "@/components/ListServices"
 import Cta from "@/components/Cta"
+import { getPosts } from "@/services/blog.service"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -29,7 +30,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PageHome() {
+export default async function PageHome() {
+  const posts = await getPosts()
+  
   return (
     <>
       <main>
@@ -113,7 +116,7 @@ export default function PageHome() {
         <Container className="py-12">
           <Heading as="h2" variant="gradient" size="h1" color="primary" className="text-center mb-6 md:mb-12">Latest posts</Heading>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {mockData.blog.posts.slice(0, 4).map(post => (
+            {posts.slice(0, 4).map(post => (
               <CardPost
                 key={post.id}
                 title={post.title}

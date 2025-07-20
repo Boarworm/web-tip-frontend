@@ -1,13 +1,15 @@
 import HeroSecondary from "@/components/HeroSecondary"
 import Container from "@/components/Container"
-import mockData from "@/data/mock-data.json"
 import CardPost from '@/components/CardPost'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import { getPosts } from '@/services/blog.service'
 
-export default function PageBlog() {
+export default async function PageBlog() {
   const breadcrumbs = [
     { name: "Blog", url: "/blog" },
   ]
+
+  const posts = await getPosts()
 
   return (
     <main>
@@ -16,7 +18,7 @@ export default function PageBlog() {
       </HeroSecondary>
       <Container className="py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {mockData.blog.posts.map(post => (
+          {posts.map(post => (
             <CardPost
               key={post.id}
               title={post.title}
