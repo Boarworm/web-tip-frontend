@@ -1,4 +1,4 @@
-import { formatDate } from "@/utils/date"
+import { formatDate } from "@/utils/date";
 
 export class Post {
   constructor(
@@ -13,15 +13,13 @@ export class Post {
     public metaTitle: string,
     public metaDescription: string,
     public metaKeywords: string
-  ) {
-  }
+  ) {}
 
   get url(): string {
-    return `/blog/${this.slug}`
+    return `/blog/${this.slug}`;
   }
 
   get formattedDate(): string {
-    return formatDate(this.createdAt)
+    return formatDate(this.createdAt);
   }
-
 }

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react"
-import { motion, AnimatePresence } from "motion/react"
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { motion, AnimatePresence } from "motion/react";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 type Testimonial = {
   quote: string;
@@ -12,42 +12,44 @@ type Testimonial = {
 };
 
 export const AnimatedTestimonials = ({
-                                       testimonials,
-                                       autoplay = false,
-                                     }: {
+  testimonials,
+  autoplay = false,
+}: {
   testimonials: Testimonial[];
   autoplay?: boolean;
 }) => {
-  const [active, setActive] = useState(0)
-  const [rotationValues, setRotationValues] = useState<number[]>([])
+  const [active, setActive] = useState(0);
+  const [rotationValues, setRotationValues] = useState<number[]>([]);
 
   const handleNext = () => {
-    setActive((prev) => (prev + 1) % testimonials.length)
-  }
+    setActive((prev) => (prev + 1) % testimonials.length);
+  };
 
   const handlePrev = () => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   const isActive = (index: number) => {
-    return index === active
-  }
+    return index === active;
+  };
 
   // Generate rotation values only on client side after hydration
   useEffect(() => {
-    setRotationValues(testimonials.map(() => Math.floor(Math.random() * 21) - 10))
-  }, [testimonials])
+    setRotationValues(
+      testimonials.map(() => Math.floor(Math.random() * 21) - 10)
+    );
+  }, [testimonials]);
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000)
-      return () => clearInterval(interval)
+      const interval = setInterval(handleNext, 5000);
+      return () => clearInterval(interval);
     }
-  }, [autoplay])
+  }, [autoplay]);
 
   const getRotationValue = (index: number) => {
-    return rotationValues[index] || 0
-  }
+    return rotationValues[index] || 0;
+  };
 
   return (
     <div className="mx-auto max-w-sm font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
@@ -153,17 +155,17 @@ export const AnimatedTestimonials = ({
               onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
             >
-              <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400"/>
+              <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
               onClick={handleNext}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
             >
-              <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400"/>
+              <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

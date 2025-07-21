@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3dCard"
-import Image from 'next/image'
-import Link from 'next/link'
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3dCard";
+import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
-  title: string
-  image: string
-  url: string
+  title: string;
+  image: string;
+  url: string;
 }
 
 export default function CardPost({ title, image, url }: Props) {
@@ -24,11 +24,14 @@ export default function CardPost({ title, image, url }: Props) {
               className="h-60 w-full object-cover group-hover/card:shadow-xl transition-shadow duration-300"
             />
           </CardItem>
-          <CardItem translateZ="50" className="mt-4 text-xl font-bold text-neutral-600 dark:text-white">
+          <CardItem
+            translateZ="50"
+            className="mt-4 text-xl font-bold text-neutral-600 dark:text-white"
+          >
             {title}
           </CardItem>
         </CardBody>
       </CardContainer>
     </Link>
-  )
+  );
 }

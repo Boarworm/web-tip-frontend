@@ -1,4 +1,4 @@
-import { BackgroundLines } from "@/components/ui/BackgroundLines"
+import { BackgroundLines } from "@/components/ui/BackgroundLines";
 
 export default function Cta() {
   return (
@@ -9,10 +9,12 @@ export default function Cta() {
         </h2>
         <div className="prose mb-12">
           <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
-            <a className="text-4xl" href="mailto:info@web-tip.top">info@web-tip.top</a>
+            <a className="text-4xl" href="mailto:info@web-tip.top">
+              info@web-tip.top
+            </a>
           </p>
         </div>
       </div>
     </BackgroundLines>
-  )
+  );
 }

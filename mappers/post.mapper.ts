@@ -1,5 +1,5 @@
-import { PostDto } from "@/dtos/post.dto"
-import { Post } from "@/models/post.model"
+import { PostDto } from "@/dtos/post.dto";
+import { Post } from "@/models/post.model";
 
 export function PostMap(dto: PostDto): Post {
   return new Post(
@@ -14,5 +14,5 @@ export function PostMap(dto: PostDto): Post {
     dto.meta_title,
     dto.meta_description,
     dto.meta_keywords
-  )
+  );
 }

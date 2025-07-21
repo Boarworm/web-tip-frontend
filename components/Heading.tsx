@@ -1,5 +1,5 @@
-import { cva, VariantProps } from "class-variance-authority"
-import { cn } from "@/lib/utils"
+import { cva, VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const headingStyles = cva("font-sans font-bold leading-tight", {
   variants: {
@@ -22,33 +22,44 @@ const headingStyles = cva("font-sans font-bold leading-tight", {
     },
   },
   compoundVariants: [
-    { variant: "gradient", color: "dark", class: "from-neutral-900 to-neutral-700" },
-    { variant: "gradient", color: "light", class: "from-neutral-100 to-neutral-300" },
-    { variant: "gradient", color: "primary", class: "from-brand-primary-700 to-brand-primary-500" },
+    {
+      variant: "gradient",
+      color: "dark",
+      class: "from-neutral-900 to-neutral-700",
+    },
+    {
+      variant: "gradient",
+      color: "light",
+      class: "from-neutral-100 to-neutral-300",
+    },
+    {
+      variant: "gradient",
+      color: "primary",
+      class: "from-brand-primary-700 to-brand-primary-500",
+    },
   ],
   defaultVariants: {
     variant: "default",
     size: "h1",
     color: "dark",
   },
-})
+});
 
 type HeadingProps = {
-  as?: React.ElementType
-  className?: string
+  as?: React.ElementType;
+  className?: string;
 } & VariantProps<typeof headingStyles> &
-  React.HTMLAttributes<HTMLElement>
+  React.HTMLAttributes<HTMLElement>;
 
-const Heading: React.FC<HeadingProps> = (
-  {
-    as: Tag = "h2",
-    variant,
-    color,
-    size,
-    className,
-    children,
-    ...props
-  }) => {
+const Heading: React.FC<HeadingProps> = ({
+  as: Tag = "h2",
+  variant,
+  color,
+  size,
+  className,
+  children,
+  ...props
+}) => {
   return (
     <Tag
       className={cn(headingStyles({ variant, color, size }), className)}
@@ -56,7 +67,7 @@ const Heading: React.FC<HeadingProps> = (
     >
       {children}
     </Tag>
-  )
-}
+  );
+};
 
-export default Heading
+export default Heading;

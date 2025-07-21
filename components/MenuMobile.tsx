@@ -1,55 +1,65 @@
-'use client'
+"use client";
 
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
-import { useState } from 'react'
-import { X, ChevronDown } from 'lucide-react'
-import mockData from "@/data/mock-data.json"
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { useState } from "react";
+import { X, ChevronDown } from "lucide-react";
+import mockData from "@/data/mock-data.json";
 
 interface Props {
-  isOpen: boolean
-  closeAction: () => void
-  className?: string
+  isOpen: boolean;
+  closeAction: () => void;
+  className?: string;
 }
 
-export default function MenuMobile({ isOpen, closeAction, className = "" }: Props) {
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+export default function MenuMobile({
+  isOpen,
+  closeAction,
+  className = "",
+}: Props) {
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   const toggleSubmenu = (title: string) => {
-    setOpenSubmenu(openSubmenu === title ? null : title)
-  }
+    setOpenSubmenu(openSubmenu === title ? null : title);
+  };
 
   const handleLinkClick = () => {
-    closeAction()
-    setOpenSubmenu(null)
-  }
+    closeAction();
+    setOpenSubmenu(null);
+  };
 
   return (
-    <div className={cn(
-      'fixed inset-0 z-70 transition-all duration-300',
-      isOpen ? 'visible opacity-100' : 'invisible opacity-0'
-    )}>
+    <div
+      className={cn(
+        "fixed inset-0 z-70 transition-all duration-300",
+        isOpen ? "visible opacity-100" : "invisible opacity-0"
+      )}
+    >
       <div
         className={cn(
-          'fixed inset-0 bg-black/20 backdrop-blur-sm transition-all duration-300',
-          isOpen ? 'opacity-100' : 'opacity-0'
+          "fixed inset-0 bg-black/20 backdrop-blur-sm transition-all duration-300",
+          isOpen ? "opacity-100" : "opacity-0"
         )}
         onClick={closeAction}
       />
 
-      <div className={cn(
-        'fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white dark:bg-gray-900 shadow-xl transform transition-all duration-300 ease-out z-10',
-        isOpen ? 'translate-x-0' : 'translate-x-full',
-        className
-      )}>
+      <div
+        className={cn(
+          "fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white dark:bg-gray-900 shadow-xl transform transition-all duration-300 ease-out z-10",
+          isOpen ? "translate-x-0" : "translate-x-full",
+          className
+        )}
+      >
         <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Menu</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+            Menu
+          </h2>
           <button
             onClick={closeAction}
             className="p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 transition-colors"
             aria-label="Close menu"
           >
-            <X className="h-5 w-5"/>
+            <X className="h-5 w-5" />
           </button>
         </div>
 
@@ -72,10 +82,12 @@ export default function MenuMobile({ isOpen, closeAction, className = "" }: Prop
                       className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
                       aria-expanded={openSubmenu === item.title}
                     >
-                      <ChevronDown className={cn(
-                        'h-4 w-4 transition-transform duration-200',
-                        openSubmenu === item.title && 'rotate-180'
-                      )}/>
+                      <ChevronDown
+                        className={cn(
+                          "h-4 w-4 transition-transform duration-200",
+                          openSubmenu === item.title && "rotate-180"
+                        )}
+                      />
                     </button>
                   )}
                 </div>
@@ -100,5 +112,5 @@ export default function MenuMobile({ isOpen, closeAction, className = "" }: Prop
         </nav>
       </div>
     </div>
-  )
+  );
 }

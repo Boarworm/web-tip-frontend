@@ -1,7 +1,7 @@
-"use client"
-import React from "react"
-import { PinContainer } from "@/components/ui/3dPin"
-import Image from "next/image"
+"use client";
+import React from "react";
+import { PinContainer } from "@/components/ui/3dPin";
+import Image from "next/image";
 
 interface Props {
   title: string;
@@ -12,10 +12,7 @@ interface Props {
 
 export default function CardProject({ title, description, image, url }: Props) {
   return (
-    <PinContainer
-      title={url}
-      href={url}
-    >
+    <PinContainer title={url} href={url}>
       <div className="flex flex-col h-full p-4 text-slate-100/50 tracking-tight">
         <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
           {title}
@@ -34,5 +31,5 @@ export default function CardProject({ title, description, image, url }: Props) {
         </div>
       </div>
     </PinContainer>
-  )
+  );
 }

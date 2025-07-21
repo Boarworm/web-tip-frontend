@@ -159,12 +159,7 @@
           "name": "React",
           "slug": "react"
         },
-        "tags": [
-          "react",
-          "hooks",
-          "javascript",
-          "frontend"
-        ],
+        "tags": ["react", "hooks", "javascript", "frontend"],
         "publishedAt": "2024-06-15T10:30:00Z",
         "updatedAt": "2024-06-15T10:30:00Z",
         "readTime": 8,
@@ -192,12 +187,7 @@
           "name": "CSS",
           "slug": "css"
         },
-        "tags": [
-          "css",
-          "grid",
-          "responsive",
-          "layout"
-        ],
+        "tags": ["css", "grid", "responsive", "layout"],
         "publishedAt": "2024-06-12T14:45:00Z",
         "updatedAt": "2024-06-12T14:45:00Z",
         "readTime": 12,
@@ -225,12 +215,7 @@
           "name": "JavaScript",
           "slug": "javascript"
         },
-        "tags": [
-          "javascript",
-          "es2024",
-          "features",
-          "programming"
-        ],
+        "tags": ["javascript", "es2024", "features", "programming"],
         "publishedAt": "2024-06-10T09:15:00Z",
         "updatedAt": "2024-06-10T09:15:00Z",
         "readTime": 10,
@@ -258,12 +243,7 @@
           "name": "Node.js",
           "slug": "nodejs"
         },
-        "tags": [
-          "nodejs",
-          "performance",
-          "optimization",
-          "backend"
-        ],
+        "tags": ["nodejs", "performance", "optimization", "backend"],
         "publishedAt": "2024-06-08T16:20:00Z",
         "updatedAt": "2024-06-08T16:20:00Z",
         "readTime": 15,
@@ -291,12 +271,7 @@
           "name": "TypeScript",
           "slug": "typescript"
         },
-        "tags": [
-          "typescript",
-          "best-practices",
-          "enterprise",
-          "architecture"
-        ],
+        "tags": ["typescript", "best-practices", "enterprise", "architecture"],
         "publishedAt": "2024-06-05T11:30:00Z",
         "updatedAt": "2024-06-05T11:30:00Z",
         "readTime": 18,
@@ -324,13 +299,7 @@
           "name": "API Design",
           "slug": "api-design"
         },
-        "tags": [
-          "api",
-          "rest",
-          "design",
-          "backend",
-          "architecture"
-        ],
+        "tags": ["api", "rest", "design", "backend", "architecture"],
         "publishedAt": "2024-06-03T13:45:00Z",
         "updatedAt": "2024-06-03T13:45:00Z",
         "readTime": 14,
@@ -358,12 +327,7 @@
           "name": "CSS",
           "slug": "css"
         },
-        "tags": [
-          "css",
-          "container-queries",
-          "subgrid",
-          "responsive"
-        ],
+        "tags": ["css", "container-queries", "subgrid", "responsive"],
         "publishedAt": "2024-06-01T10:00:00Z",
         "updatedAt": "2024-06-01T10:00:00Z",
         "readTime": 11,
@@ -391,13 +355,7 @@
           "name": "Database",
           "slug": "database"
         },
-        "tags": [
-          "database",
-          "indexing",
-          "performance",
-          "postgresql",
-          "mysql"
-        ],
+        "tags": ["database", "indexing", "performance", "postgresql", "mysql"],
         "publishedAt": "2024-05-29T15:30:00Z",
         "updatedAt": "2024-05-29T15:30:00Z",
         "readTime": 20,
@@ -425,12 +383,7 @@
           "name": "React",
           "slug": "react"
         },
-        "tags": [
-          "react",
-          "testing",
-          "jest",
-          "testing-library"
-        ],
+        "tags": ["react", "testing", "jest", "testing-library"],
         "publishedAt": "2024-05-27T08:15:00Z",
         "updatedAt": "2024-05-27T08:15:00Z",
         "readTime": 16,
@@ -458,13 +411,7 @@
           "name": "API Design",
           "slug": "api-design"
         },
-        "tags": [
-          "graphql",
-          "rest",
-          "api",
-          "architecture",
-          "comparison"
-        ],
+        "tags": ["graphql", "rest", "api", "architecture", "comparison"],
         "publishedAt": "2024-05-25T12:00:00Z",
         "updatedAt": "2024-05-25T12:00:00Z",
         "readTime": 13,
