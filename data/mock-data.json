@@ -1,0 +1,547 @@
+{
+  "services": [
+    {
+      "title": "Custom website development",
+      "description": "Building websites from scratch using modern frameworks (React, Next.js, Laravel, etc.)",
+      "icon": "code"
+    },
+    {
+      "title": "Landing page design & creation",
+      "description": "High-converting pages for marketing campaigns and lead generation",
+      "icon": "rocket"
+    },
+    {
+      "title": "Web application development",
+      "description": "Interactive web apps, dashboards, SaaS platforms",
+      "icon": "apps"
+    },
+    {
+      "title": "Website redesign & modernization",
+      "description": "Updating outdated sites with modern design and performance",
+      "icon": "palette"
+    },
+    {
+      "title": "API development & integration",
+      "description": "Backend services, third-party integrations, database connections",
+      "icon": "api"
+    },
+    {
+      "title": "CMS setup & implementation",
+      "description": "Content management solutions for easy website updates",
+      "icon": "settings"
+    },
+    {
+      "title": "Website maintenance & updates",
+      "description": "Regular updates, security patches, content management",
+      "icon": "tool"
+    },
+    {
+      "title": "Performance optimization",
+      "description": "Speed improvements, SEO optimization, mobile responsiveness",
+      "icon": "gauge"
+    }
+  ],
+  "navigation": [
+    {
+      "id": "home",
+      "title": "Home",
+      "url": "/",
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": "about",
+      "title": "About",
+      "url": "/about",
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "url": "/services",
+      "order": 3,
+      "active": true,
+      "submenu": [
+        {
+          "title": "Web Development",
+          "url": "/services/web"
+        },
+        {
+          "title": "Design",
+          "url": "/services/design"
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "url": "/portfolio",
+      "order": 4,
+      "active": true
+    },
+    {
+      "id": "blog",
+      "title": "Blog",
+      "url": "/blog",
+      "order": 5,
+      "active": true
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "url": "/contact",
+      "order": 6,
+      "active": true
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "description": "Modern online store with React and Laravel backend, featuring secure payments and inventory management.",
+      "image": "/images/placeholder.png",
+      "url": "https://google.com"
+    },
+    {
+      "id": 2,
+      "title": "Restaurant Landing Page",
+      "description": "Responsive landing page with online reservations, menu showcase, and contact integration.",
+      "image": "/images/placeholder.png",
+      "url": "https://google.com"
+    },
+    {
+      "id": 3,
+      "title": "Corporate Website",
+      "description": "Professional business website with CMS integration, team profiles, and service showcase.",
+      "image": "/images/placeholder.png",
+      "url": "https://google.com"
+    },
+    {
+      "id": 4,
+      "title": "SaaS Dashboard",
+      "description": "Interactive web application with real-time data visualization and user management system.",
+      "image": "/images/placeholder.png",
+      "url": "https://google.com"
+    },
+    {
+      "id": 5,
+      "title": "Portfolio Website",
+      "description": "Creative portfolio with smooth animations, project galleries, and contact form integration.",
+      "image": "/images/placeholder.png",
+      "url": "https://google.com"
+    },
+    {
+      "id": 6,
+      "title": "Real Estate Platform",
+      "description": "Property listing website with advanced search, map integration, and agent contact system.",
+      "image": "/images/placeholder.png",
+      "url": "https://google.com"
+    }
+  ],
+  "blog": {
+    "posts": [
+      {
+        "id": 1,
+        "title": "Getting Started with React Hooks",
+        "slug": "getting-started-with-react-hooks",
+        "excerpt": "Learn how to use React Hooks to manage state and side effects in functional components.",
+        "content": "React Hooks revolutionized how we write React components by allowing us to use state and other React features without writing a class. In this comprehensive guide, we'll explore the most commonly used hooks and how to implement them in your projects.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 1,
+          "name": "Sarah Johnson",
+          "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+          "bio": "Frontend Developer passionate about React and modern web technologies"
+        },
+        "category": {
+          "id": 1,
+          "name": "React",
+          "slug": "react"
+        },
+        "tags": [
+          "react",
+          "hooks",
+          "javascript",
+          "frontend"
+        ],
+        "publishedAt": "2024-06-15T10:30:00Z",
+        "updatedAt": "2024-06-15T10:30:00Z",
+        "readTime": 8,
+        "views": 1247,
+        "likes": 89,
+        "comments": 23,
+        "featured": true,
+        "status": "published"
+      },
+      {
+        "id": 2,
+        "title": "Building Responsive Layouts with CSS Grid",
+        "slug": "building-responsive-layouts-with-css-grid",
+        "excerpt": "Master CSS Grid to create complex, responsive layouts with ease and flexibility.",
+        "content": "CSS Grid is a powerful layout system that allows you to create complex, responsive designs with minimal code. Unlike Flexbox, which is primarily one-dimensional, Grid excels at two-dimensional layouts.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 2,
+          "name": "Michael Chen",
+          "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+          "bio": "CSS enthusiast and UI/UX designer with 5+ years of experience"
+        },
+        "category": {
+          "id": 2,
+          "name": "CSS",
+          "slug": "css"
+        },
+        "tags": [
+          "css",
+          "grid",
+          "responsive",
+          "layout"
+        ],
+        "publishedAt": "2024-06-12T14:45:00Z",
+        "updatedAt": "2024-06-12T14:45:00Z",
+        "readTime": 12,
+        "views": 892,
+        "likes": 67,
+        "comments": 15,
+        "featured": false,
+        "status": "published"
+      },
+      {
+        "id": 3,
+        "title": "JavaScript ES2024: New Features You Should Know",
+        "slug": "javascript-es2024-new-features",
+        "excerpt": "Explore the latest JavaScript features introduced in ES2024 and how they can improve your code.",
+        "content": "JavaScript continues to evolve with each new ECMAScript release. ES2024 brings several exciting features that will make your code more efficient and readable. Let's dive into the most important additions.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 3,
+          "name": "Emily Rodriguez",
+          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+          "bio": "JavaScript developer and technical writer"
+        },
+        "category": {
+          "id": 3,
+          "name": "JavaScript",
+          "slug": "javascript"
+        },
+        "tags": [
+          "javascript",
+          "es2024",
+          "features",
+          "programming"
+        ],
+        "publishedAt": "2024-06-10T09:15:00Z",
+        "updatedAt": "2024-06-10T09:15:00Z",
+        "readTime": 10,
+        "views": 1456,
+        "likes": 124,
+        "comments": 31,
+        "featured": true,
+        "status": "published"
+      },
+      {
+        "id": 4,
+        "title": "Node.js Performance Optimization Tips",
+        "slug": "nodejs-performance-optimization-tips",
+        "excerpt": "Learn practical techniques to optimize your Node.js applications for better performance and scalability.",
+        "content": "Performance optimization is crucial for Node.js applications, especially as they scale. This guide covers essential techniques including async/await best practices, memory management, and profiling tools.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 4,
+          "name": "David Kim",
+          "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+          "bio": "Backend developer specializing in Node.js and cloud architecture"
+        },
+        "category": {
+          "id": 4,
+          "name": "Node.js",
+          "slug": "nodejs"
+        },
+        "tags": [
+          "nodejs",
+          "performance",
+          "optimization",
+          "backend"
+        ],
+        "publishedAt": "2024-06-08T16:20:00Z",
+        "updatedAt": "2024-06-08T16:20:00Z",
+        "readTime": 15,
+        "views": 743,
+        "likes": 52,
+        "comments": 18,
+        "featured": false,
+        "status": "published"
+      },
+      {
+        "id": 5,
+        "title": "TypeScript Best Practices for Large Applications",
+        "slug": "typescript-best-practices-large-applications",
+        "excerpt": "Discover essential TypeScript patterns and practices for maintaining large-scale applications.",
+        "content": "As TypeScript applications grow in size and complexity, following best practices becomes crucial for maintainability and developer productivity. This article covers advanced TypeScript techniques for enterprise applications.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 5,
+          "name": "Jessica Taylor",
+          "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
+          "bio": "Senior TypeScript developer and team lead"
+        },
+        "category": {
+          "id": 5,
+          "name": "TypeScript",
+          "slug": "typescript"
+        },
+        "tags": [
+          "typescript",
+          "best-practices",
+          "enterprise",
+          "architecture"
+        ],
+        "publishedAt": "2024-06-05T11:30:00Z",
+        "updatedAt": "2024-06-05T11:30:00Z",
+        "readTime": 18,
+        "views": 2103,
+        "likes": 187,
+        "comments": 45,
+        "featured": true,
+        "status": "published"
+      },
+      {
+        "id": 6,
+        "title": "API Design Principles for RESTful Services",
+        "slug": "api-design-principles-restful-services",
+        "excerpt": "Learn how to design clean, consistent, and developer-friendly REST APIs.",
+        "content": "Good API design is fundamental to creating services that are easy to use, maintain, and scale. This guide covers REST API best practices, including resource naming, HTTP methods, status codes, and versioning strategies.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 6,
+          "name": "Alex Thompson",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+          "bio": "API architect and backend systems designer"
+        },
+        "category": {
+          "id": 6,
+          "name": "API Design",
+          "slug": "api-design"
+        },
+        "tags": [
+          "api",
+          "rest",
+          "design",
+          "backend",
+          "architecture"
+        ],
+        "publishedAt": "2024-06-03T13:45:00Z",
+        "updatedAt": "2024-06-03T13:45:00Z",
+        "readTime": 14,
+        "views": 1089,
+        "likes": 78,
+        "comments": 27,
+        "featured": false,
+        "status": "published"
+      },
+      {
+        "id": 7,
+        "title": "Modern CSS: Container Queries and Subgrid",
+        "slug": "modern-css-container-queries-subgrid",
+        "excerpt": "Explore cutting-edge CSS features that are changing how we approach responsive design.",
+        "content": "Container queries and subgrid are two powerful CSS features that give developers unprecedented control over responsive design. Learn how to implement these modern techniques in your projects.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 2,
+          "name": "Michael Chen",
+          "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+          "bio": "CSS enthusiast and UI/UX designer with 5+ years of experience"
+        },
+        "category": {
+          "id": 2,
+          "name": "CSS",
+          "slug": "css"
+        },
+        "tags": [
+          "css",
+          "container-queries",
+          "subgrid",
+          "responsive"
+        ],
+        "publishedAt": "2024-06-01T10:00:00Z",
+        "updatedAt": "2024-06-01T10:00:00Z",
+        "readTime": 11,
+        "views": 654,
+        "likes": 43,
+        "comments": 12,
+        "featured": false,
+        "status": "published"
+      },
+      {
+        "id": 8,
+        "title": "Database Optimization: Indexing Strategies",
+        "slug": "database-optimization-indexing-strategies",
+        "excerpt": "Master database indexing to dramatically improve query performance and application speed.",
+        "content": "Database performance is often the bottleneck in web applications. Understanding indexing strategies can make the difference between a slow and fast application. This comprehensive guide covers indexing best practices for PostgreSQL and MySQL.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 7,
+          "name": "Maria Garcia",
+          "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+          "bio": "Database administrator and performance optimization expert"
+        },
+        "category": {
+          "id": 7,
+          "name": "Database",
+          "slug": "database"
+        },
+        "tags": [
+          "database",
+          "indexing",
+          "performance",
+          "postgresql",
+          "mysql"
+        ],
+        "publishedAt": "2024-05-29T15:30:00Z",
+        "updatedAt": "2024-05-29T15:30:00Z",
+        "readTime": 20,
+        "views": 1876,
+        "likes": 143,
+        "comments": 38,
+        "featured": true,
+        "status": "published"
+      },
+      {
+        "id": 9,
+        "title": "React Testing Library: Complete Guide",
+        "slug": "react-testing-library-complete-guide",
+        "excerpt": "Learn how to write maintainable and effective tests for your React components.",
+        "content": "Testing is an essential part of React development. React Testing Library provides a simple and complete testing solution that encourages good testing practices. This guide covers everything from basic component testing to advanced patterns.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 1,
+          "name": "Sarah Johnson",
+          "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+          "bio": "Frontend Developer passionate about React and modern web technologies"
+        },
+        "category": {
+          "id": 1,
+          "name": "React",
+          "slug": "react"
+        },
+        "tags": [
+          "react",
+          "testing",
+          "jest",
+          "testing-library"
+        ],
+        "publishedAt": "2024-05-27T08:15:00Z",
+        "updatedAt": "2024-05-27T08:15:00Z",
+        "readTime": 16,
+        "views": 932,
+        "likes": 71,
+        "comments": 19,
+        "featured": false,
+        "status": "published"
+      },
+      {
+        "id": 10,
+        "title": "GraphQL vs REST: When to Use Each",
+        "slug": "graphql-vs-rest-when-to-use-each",
+        "excerpt": "Understanding the trade-offs between GraphQL and REST to make informed architectural decisions.",
+        "content": "Both GraphQL and REST have their place in modern web development. This article explores the strengths and weaknesses of each approach, helping you choose the right tool for your specific use case.",
+        "image": "/images/placeholder.png",
+        "author": {
+          "id": 6,
+          "name": "Alex Thompson",
+          "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+          "bio": "API architect and backend systems designer"
+        },
+        "category": {
+          "id": 6,
+          "name": "API Design",
+          "slug": "api-design"
+        },
+        "tags": [
+          "graphql",
+          "rest",
+          "api",
+          "architecture",
+          "comparison"
+        ],
+        "publishedAt": "2024-05-25T12:00:00Z",
+        "updatedAt": "2024-05-25T12:00:00Z",
+        "readTime": 13,
+        "views": 1345,
+        "likes": 98,
+        "comments": 34,
+        "featured": false,
+        "status": "published"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "React",
+        "slug": "react",
+        "description": "Everything about React development",
+        "postsCount": 2
+      },
+      {
+        "id": 2,
+        "name": "CSS",
+        "slug": "css",
+        "description": "Styling and layout techniques",
+        "postsCount": 2
+      },
+      {
+        "id": 3,
+        "name": "JavaScript",
+        "slug": "javascript",
+        "description": "JavaScript tips and best practices",
+        "postsCount": 1
+      },
+      {
+        "id": 4,
+        "name": "Node.js",
+        "slug": "nodejs",
+        "description": "Server-side JavaScript development",
+        "postsCount": 1
+      },
+      {
+        "id": 5,
+        "name": "TypeScript",
+        "slug": "typescript",
+        "description": "TypeScript development and best practices",
+        "postsCount": 1
+      },
+      {
+        "id": 6,
+        "name": "API Design",
+        "slug": "api-design",
+        "description": "REST and GraphQL API development",
+        "postsCount": 2
+      },
+      {
+        "id": 7,
+        "name": "Database",
+        "slug": "database",
+        "description": "Database design and optimization",
+        "postsCount": 1
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Rostyslav delivered everything ahead of schedule and communicated clearly throughout. Super easy to work with.",
+      "name": "Sarah Chen",
+      "src": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "quote": "His code is clean, efficient, and well-documented. The project wouldn’t have launched on time without him.",
+      "name": "Jakob Møller",
+      "src": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=82&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "quote": "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+      "name": "Emily Watson",
+      "src": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=81&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+}
