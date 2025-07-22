@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -23,11 +24,14 @@ export default function Logo({
   return (
     <div className={cn("flex", className)}>
       <Link href="/" className="inline-flex items-center">
-        <img
+        <Image
           src={logoSrc}
           alt={title}
           title={title}
-          className="w-[35px] md:w-[46px]"
+          width={46}
+          height={46}
+          className="w-[35px] md:w-[46px] h-auto"
+          priority
         />
         {showText && (
           <span

@@ -13,9 +13,9 @@ export default function PageAbout() {
       <Container className="py-12">
         <div className="prose">
           <p>
-            I'm a full-stack web developer with over 10 years of experience
-            building fast, user-centered websites. I specialize in Laravel,
-            OctoberCMS, and modern frontend tools like Next.js.
+            {
+              "I'm a full-stack web developer with over 10 years of experience building fast, user-centered websites. I specialize in Laravel, OctoberCMS, and modern frontend tools like Next.js."
+            }
           </p>
         </div>
       </Container>

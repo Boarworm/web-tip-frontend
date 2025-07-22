@@ -116,10 +116,9 @@ export default async function PageHome() {
                 <div className="flex items-start space-x-4">
                   <div className="w-3 h-3 bg-gradient-to-r from-brand-primary-500 to-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-700 leading-relaxed">
-                    I'm a full-stack web developer with over 10 years of
-                    experience building fast, user-centered websites. I
-                    specialize in Laravel, OctoberCMS, and modern frontend tools
-                    like Next.js.
+                    {
+                      "I'm a full-stack web developer with over 10 years of experience building fast, user-centered websites. I specialize in Laravel, OctoberCMS, and modern frontend tools like Next.js."
+                    }
                   </p>
                 </div>
               </div>
@@ -128,8 +127,9 @@ export default async function PageHome() {
                 <div className="flex items-start space-x-4">
                   <div className="w-3 h-3 bg-gradient-to-r from-brand-primary-500 to-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-700 leading-relaxed">
-                    Whether it's a simple portfolio or a custom CMS-powered
-                    site, I focus on clean code and real-world results.
+                    {
+                      "Whether it's a simple portfolio or a custom CMS-powered site, I focus on clean code and real-world results."
+                    }
                   </p>
                 </div>
               </div>
