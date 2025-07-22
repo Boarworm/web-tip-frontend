@@ -7,16 +7,16 @@ import { X, ChevronDown } from "lucide-react";
 import mockData from "@/data/mock-data.json";
 
 interface Props {
-  isOpen: boolean;
-  closeAction: () => void;
+  isOpen?: boolean;
+  closeAction?: () => void;
   className?: string;
 }
 
 export default function MenuMobile({
-  isOpen,
-  closeAction,
-  className = "",
-}: Props) {
+                                     isOpen = false,
+                                     closeAction = () => {},
+                                     className = "",
+                                   }: Props) {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   const toggleSubmenu = (title: string) => {
