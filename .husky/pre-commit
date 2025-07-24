@@ -1,0 +1,9 @@
+npx lint-staged
+npx tsc --noEmit
+npx prettier --write .
+npm test
+
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Please fix the issues before committing."
+  exit 1
+fi
