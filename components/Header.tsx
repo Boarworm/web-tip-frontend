@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import Container from "@/components/Container";
 import MenuMain from "@/components/MenuMain";
 import Logo from "@/components/Logo";
-import ThemeToggle from "@/components/ThemeToggle";
-import LanguagePicker from "@/components/LanguagePicker";
 import HamburgerButton from "@/components/Hamburger";
 import MenuMobile from "@/components/MenuMobile";
 import { createPortal } from "react-dom";

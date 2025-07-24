@@ -13,10 +13,10 @@ interface Props {
 }
 
 export default function MenuMobile({
-                                     isOpen = false,
-                                     closeAction = () => {},
-                                     className = "",
-                                   }: Props) {
+  isOpen = false,
+  closeAction = () => {},
+  className = "",
+}: Props) {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   const toggleSubmenu = (title: string) => {
